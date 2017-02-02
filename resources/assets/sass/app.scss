@@ -49,6 +49,13 @@ html, body{
     font-size: 5rem;
   }
 }
+@media screen and (min-width: 620px) {
+  .eco--intro{
+    .actor__content{
+      font-size: 2rem;
+    }
+  }
+}
 .eco--installation{
   .installation{
     width: 50%;
