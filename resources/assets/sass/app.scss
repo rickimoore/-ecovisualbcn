@@ -1,0 +1,99 @@
+@import "mixins/mixins";
+@import "components/transitions";
+@import "components/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#app, .eco--intro, .eco--installation, .eco--secene{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.scene--load{
+  width: 25%;
+  height: 5px;
+  background-color: red;
+  position: relative;
+  .progress{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    @include transition(all, 3s);
+  }
+
+  .full--progress{
+    width: 100%;
+  }
+}
+
+.eco--installation, .eco--intro{
+  @include flex();
+  @include flex-center();
+  color: #ffffff;
+}
+.eco--intro{
+  .actor__content{
+    font-family: "Archive", sans-serif;
+    font-size: 5rem;
+  }
+}
+.eco--installation{
+  .installation{
+    width: 50%;
+    text-align: left;
+    p {
+      font-size: 18px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
+    }
+    > * + * {
+      margin-top: 3%;
+    }
+  }
+}
+.ecoscene--tweets{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  max-height: 600px;
+  width: 300px;
+  overflow: scroll;
+  > * + * {
+    margin-top: 5%;
+  }
+  .tweet{
+    width: 100%;
+    background-color: white;
+
+    .tweet--head, .tweet--content{
+      padding: 2%;
+      @include flex();
+      @include flex-row(nowrap);
+      > * + * {
+        margin-left: 2%;
+      }
+    }
+
+    .tweet--head{
+      background: #00aced;
+      color: #ffffff;
+      align-items: center;
+      img{
+        width: 25px;
+      }
+    }
+  }
+}
+

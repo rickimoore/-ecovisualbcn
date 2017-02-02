@@ -1,0 +1,27 @@
+@import "../mixins/mixins";
+
+//vue 2.0 transitions
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1.5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+
+//SlideIn with a jump-up
+
+.slideUp-enter-active, .slideUp-leave-active{
+  transition: all .5s ease;
+  transform: translateY(0);
+}
+
+.slideUp-enter{
+  opacity: 0;
+  @include transform(translateY(100%));
+}
+.slideUp-leave-active{
+  opacity: 0;
+  @include transform(translateY(-100%));
+}

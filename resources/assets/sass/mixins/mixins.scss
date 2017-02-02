@@ -1,0 +1,118 @@
+@mixin cover(){
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@mixin transition($object, $time){
+  -webkit-transition: $object $time ease;
+  -moz-transition: $object $time ease;
+  -ms-transition: $object $time ease;
+  -o-transition: $object $time ease;
+  transition: $object $time ease;
+}
+
+@mixin transform($transformation){
+  -webkit-transform: $transformation ;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;
+  transform: $transformation;
+}
+
+@mixin fullscreen(){
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+@mixin cover(){
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@mixin flex(){
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+}
+
+@mixin fixscreen(){
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin flex-center(){
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-center($wrap){
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: $wrap;
+}
+
+
+@mixin flex-start(){
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-row($wrap){
+  flex-direction: row;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-column(){
+  flex-direction: column;
+}
+
+@mixin card-1() {
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+@mixin card-1-left() {
+  box-shadow: -2px 0px 3px rgba(44,53,57,0.12), 0 1px 2px rgba(44,53,57,0.01);
+}
+
+@mixin card-2() {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin card-3() {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+@mixin card-4() {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@mixin card-5() {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+@mixin keyframes($animationName)
+{
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName}  {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
