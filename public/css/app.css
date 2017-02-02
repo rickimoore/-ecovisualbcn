@@ -129,7 +129,7 @@ html, body {
 }
 
 .ecoscene--tweets .tweet .tweet--head, .ecoscene--tweets .tweet .tweet--content {
-  padding: 2%;
+  padding: 1%;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   /* OLD - Firefox 19- (buggy but mostly works) */
